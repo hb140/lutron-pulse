@@ -1,0 +1,53 @@
+# Mapping file between lutron buttons and shade actions
+
+---
+Lutron Areas: 
+  - Office:
+    - Office Shade Pico Keypad:
+      Device Type: keypad
+      Button List:
+        - Open:
+          - 0: 
+            Room Name: Living Room
+            Blind Name: Side Pane
+            Action: Open
+          - 1: 
+            Room Name: Living Room
+            Blind Name: Right Pane
+            Action: Open
+          - 2: 
+            Room Name: Living Room
+            Blind Name: Left Pane
+            Action: Open
+        - Preset 1: 
+          - 0: 
+            Room Name: Living Room
+            Blind Name: Side Pane
+            Action: MoveTo
+            Param: 25
+          - 1: 
+            Room Name: Living Room
+            Blind Name: Right Pane
+            Action: MoveTo
+            Param: 25
+          - 2: 
+            Room Name: Living Room
+            Blind Name: Left Pane
+            Action: MoveTo
+            Param: 25
+        - Close: 
+          - 0: 
+            Room Name: Living Room
+            Blind Name: Side Pane
+            Action: Close
+          - 1: 
+            Room Name: Living Room
+            Blind Name: Right Pane
+            Action: Close
+          - 2: 
+            Room Name: Living Room
+            Blind Name: Left Pane
+            Action: Close
+    - Fake Keypad:
+      Device Type: fake_keypad
+
