@@ -1,6 +1,6 @@
 [submodule "pylutron"]
 	path = pylutron
-	url = git@github.com:thecynic/pylutron.git
+	url = git@github.com:hb140/pylutron.git
 [submodule "aiopulse"]
 	path = aiopulse
 	url = git@github.com:atmurray/aiopulse.git
