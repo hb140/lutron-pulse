@@ -2,8 +2,8 @@
 
 ---
 Lutron Areas: 
-  - Office:
-    - Office Shade Pico Keypad:
+  - Living Room:
+    - Living Room Shade Pico Keypad:
       Device Type: keypad
       Button List:
         - Open:
@@ -35,6 +35,22 @@ Lutron Areas:
             Blind Name: Left Pane
             Action: MoveTo
             Param: 25
+        - Preset 2: 
+          - 0: 
+            Room Name: Living Room
+            Blind Name: Side Pane
+            Action: MoveTo
+            Param: 50
+          - 1: 
+            Room Name: Living Room
+            Blind Name: Right Pane
+            Action: MoveTo
+            Param: 50
+          - 2: 
+            Room Name: Living Room
+            Blind Name: Left Pane
+            Action: MoveTo
+            Param: 50
         - Close: 
           - 0: 
             Room Name: Living Room
@@ -48,6 +64,31 @@ Lutron Areas:
             Room Name: Living Room
             Blind Name: Left Pane
             Action: Close
-    - Fake Keypad:
-      Device Type: fake_keypad
+  - Office:
+    - Office Shade Pico Keypad:
+      Device Type: keypad
+      Button List:
+        - Open:
+          - 0: 
+            Room Name: Office
+            Blind Name: Sideyard Window
+            Action: Open
+        - Preset 1: 
+          - 0: 
+            Room Name: Office
+            Blind Name: Sideyard Window
+            Action: MoveTo
+            Param: 40
+        - Preset 2: 
+          - 0: 
+            Room Name: Office
+            Blind Name: Sideyard Window
+            Action: MoveTo
+            Param: 70
+        - Close: 
+          - 0: 
+            Room Name: Office
+            Blind Name: Sideyard Window
+            Action: Close
+
 

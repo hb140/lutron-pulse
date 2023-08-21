@@ -184,7 +184,7 @@ def lutron_proc(q):
     lutronMgr.rra2._conn.join()
     logger.info("Lutron Process Done!")
 
-# A listener object that monitors commands arriving from Lutron button call backs
+# A listener function that monitors commands arriving from Lutron button call backs
 def pulse_queue_listener(q, mgr):
     loop = True
     while loop:
@@ -229,10 +229,8 @@ async def pulse_proc(q):
 
     # Wait until the hub has a chance to download the list of devices 
     await asyncio.sleep(10)
-
-    # Create a list of devices, and store it in a yaml file
-
-
+    
+    # Start the pulse_queue_listener as a co-routine
     coro1 = asyncio.to_thread(pulse_queue_listener, q, mgr)
     await(coro1)
     
