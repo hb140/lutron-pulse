@@ -3,6 +3,8 @@
 # It creates two threads, one to take care of lutron processes and another for pulse processes
 # A yaml mapping file defines how to map buttons into shade actions
 
+# To start this process in the background: nohup python3 lutron2pulse.py >> lp_log.txt
+
 from multiprocessing import Process, Queue
 import logging
 import asyncio
@@ -25,6 +27,7 @@ import aiopulse
 
 # Set logging level
 logging.basicConfig()
+#logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
@@ -141,6 +144,9 @@ def button_cb(entity, context, event, params):
 # Main Lutron Process
 # Responsible for creating a LutronHubMgr object, parsing the yaml file and registering button callbacks
 def lutron_proc(q):
+    # Create lutronMgr object
+    # This will in turn create a rra2 object and create a new thread that monitors
+    # telnet traffic from the RRA2 controller
     lutronMgr = LutronHubMgr(q)
 
     # Open yaml mapping file
